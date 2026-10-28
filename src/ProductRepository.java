@@ -4,4 +4,5 @@ public interface ProductRepository {
     Products findById(int id);
     int total();
     List<Products> findByPriseRage(int min, int max);
+    int amount(int price);
 }

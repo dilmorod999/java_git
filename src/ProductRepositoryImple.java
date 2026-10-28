@@ -43,4 +43,15 @@ public class ProductRepositoryImple implements ProductRepository {
         return result;
     }
 
+    @Override
+    public int amount(int price) {
+        int amount = 0;
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getPrice() > price) {
+                amount++;
+            }
+        }
+        return amount;
+    }
+
 }

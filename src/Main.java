@@ -14,8 +14,10 @@ public class Main {
         ProductRepositoryImple productRepositoryImple = new ProductRepositoryImple(productsArrayList);
 //        int total = productRepositoryImple.total();
 //        System.out.println(total);
-        List<Products> minmax = productRepositoryImple.findByPriseRage(900, 2000);
-        System.out.println(minmax);
+//        List<Products> minmax = productRepositoryImple.findByPriseRage(900, 2000);
+//        System.out.println(minmax);
+        int amount = productRepositoryImple.amount(900);
+        System.out.println(amount);
 
     }
 }
