@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +12,10 @@ public class Main {
         productsArrayList.add(products1);
         productsArrayList.add(products2);
         ProductRepositoryImple productRepositoryImple = new ProductRepositoryImple(productsArrayList);
-        int total = productRepositoryImple.total();
-        System.out.println(total);
+//        int total = productRepositoryImple.total();
+//        System.out.println(total);
+        List<Products> minmax = productRepositoryImple.findByPriseRage(900, 2000);
+        System.out.println(minmax);
+
     }
 }

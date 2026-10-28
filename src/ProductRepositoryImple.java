@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepositoryImple implements ProductRepository {
@@ -30,4 +31,16 @@ public class ProductRepositoryImple implements ProductRepository {
         }
         return total;
     }
+
+    @Override
+    public List<Products> findByPriseRage(int min, int max) {
+        List<Products> result = new ArrayList<>();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getPrice() > min && products.get(i).getPrice() < max) {
+                result.add(products.get(i));
+            }
+        }
+        return result;
+    }
+
 }
