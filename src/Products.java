@@ -29,4 +29,13 @@ public class Products {
         return date;
     }
 
+    @Override
+    public String toString() {
+        return "Products{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", date=" + date +
+                '}';
+    }
 }
