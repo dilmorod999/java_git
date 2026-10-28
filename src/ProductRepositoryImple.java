@@ -20,6 +20,14 @@ public class ProductRepositoryImple implements ProductRepository {
             }
         }
         return product;
+    }
 
+    @Override
+    public int total() {
+        int total = 0;
+        for (int i = 0; i < products.size(); i++) {
+            total = total + products.get(i).getPrice();
+        }
+        return total;
     }
 }

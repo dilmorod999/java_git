@@ -10,5 +10,8 @@ public class Main {
         productsArrayList.add(products);
         productsArrayList.add(products1);
         productsArrayList.add(products2);
+        ProductRepositoryImple productRepositoryImple = new ProductRepositoryImple(productsArrayList);
+        int total = productRepositoryImple.total();
+        System.out.println(total);
     }
 }
