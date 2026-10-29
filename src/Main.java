@@ -16,8 +16,10 @@ public class Main {
 //        System.out.println(total);
 //        List<Products> minmax = productRepositoryImple.findByPriseRage(900, 2000);
 //        System.out.println(minmax);
-        int amount = productRepositoryImple.amount(900);
-        System.out.println(amount);
+//        int amount = productRepositoryImple.amount(900);
+//        System.out.println(amount);
+        Products max = productRepositoryImple.findMaxProduct();
+        System.out.println(max);
 
     }
 }
