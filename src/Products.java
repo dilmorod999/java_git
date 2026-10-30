@@ -25,6 +25,10 @@ public class Products {
         return price;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public LocalDate getDate() {
         return date;
     }

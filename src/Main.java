@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Products products = new Products(1, "Iphone", 2000, LocalDate.now());
+        Products products = new Products(1, "Iphone", -2000, LocalDate.now());
         Products products1 = new Products(2, "aSamsunga", 1400, LocalDate.now());
         Products products2 = new Products(3, "Redmia", 900, LocalDate.now());
         ArrayList<Products> productsArrayList = new ArrayList<>();
@@ -27,7 +27,10 @@ public class Main {
 //        System.out.println(totalLatsA);
 //        int AmountProductFirstLast = productRepositoryImple.AmountFirstLast();
 //        System.out.println(AmountProductFirstLast);
-        int amountProductLast = productRepositoryImple.AmountLastName("a");
-        System.out.println(amountProductLast);
+//        int amountProductLast = productRepositoryImple.AmountLastName("a");
+//        System.out.println(amountProductLast);
+        List<Products> reverseNegativePrice = productRepositoryImple.findReverseProductNegative();
+        System.out.println(reverseNegativePrice);
+
     }
 }

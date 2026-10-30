@@ -71,7 +71,7 @@ public class ProductRepositoryImple implements ProductRepository {
     public List<Products> findMaxMinProduct() {
         List<Products> result = new ArrayList<>();
         Products maxProduct = null;
-        Products minProduct = null;
+        Products minProduct = products.get(0);
         int max = 0;
         int min = products.get(0).getPrice();
         for (int i = 0; i < products.size(); i++) {
@@ -82,10 +82,10 @@ public class ProductRepositoryImple implements ProductRepository {
             if (products.get(i).getPrice() < min) {
                 min = products.get(i).getPrice();
                 minProduct = products.get(i);
-                result.add(maxProduct);
-                result.add(minProduct);
             }
         }
+        result.add(maxProduct);
+        result.add(minProduct);
         return result;
     }
 
@@ -103,11 +103,11 @@ public class ProductRepositoryImple implements ProductRepository {
 
     @Override
     public int AmountFirstLast() {
-        int amount =0;
-        for (int i = 0; i <products.size() ; i++) {
-            String first = products.get(i).getName().substring(0,1);
-            String last = products.get(i).getName().substring(products.get(i).getName().length()-1);
-            if (first.equals(last)){
+        int amount = 0;
+        for (int i = 0; i < products.size(); i++) {
+            String first = products.get(i).getName().substring(0, 1);
+            String last = products.get(i).getName().substring(products.get(i).getName().length() - 1);
+            if (first.equals(last)) {
                 amount++;
             }
         }
@@ -116,14 +116,30 @@ public class ProductRepositoryImple implements ProductRepository {
 
     @Override
     public int AmountLastName(String name) {
-        int amount =0;
-        for (int i = 0; i <products.size() ; i++) {
-            String last = products.get(i).getName().substring(products.get(i).getName().length()-1);
-            if (last.equals(name)){
+        int amount = 0;
+        for (int i = 0; i < products.size(); i++) {
+            String last = products.get(i).getName().substring(products.get(i).getName().length() - 1);
+            if (last.equals(name)) {
                 amount++;
             }
         }
         return amount;
+    }
+
+    @Override
+    public List<Products> findReverseProductNegative() {
+        List<Products> result = new ArrayList<>();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getPrice() < 0) {
+                String empty = "";
+                for (int j = products.get(i).getName().length() - 1; j >= 0; j--) {
+                    empty = empty + products.get(i).getName().charAt(j);
+                }
+                products.get(i).setName(empty);
+                result.add(products.get(i));
+            }
+        }
+        return result;
     }
 
 
