@@ -101,5 +101,18 @@ public class ProductRepositoryImple implements ProductRepository {
         return total;
     }
 
+    @Override
+    public int AmountFirstLast() {
+        int amount =0;
+        for (int i = 0; i <products.size() ; i++) {
+            String first = products.get(i).getName().substring(0,1);
+            String last = products.get(i).getName().substring(products.get(i).getName().length()-1);
+            if (first.equals(last)){
+                amount++;
+            }
+        }
+        return amount;
+    }
+
 
 }
