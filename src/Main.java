@@ -29,8 +29,9 @@ public class Main {
 //        System.out.println(AmountProductFirstLast);
 //        int amountProductLast = productRepositoryImple.AmountLastName("a");
 //        System.out.println(amountProductLast);
-        List<Products> reverseNegativePrice = productRepositoryImple.findReverseProductNegative();
-        System.out.println(reverseNegativePrice);
-
+//        List<Products> reverseNegativePrice = productRepositoryImple.findReverseProductNegative();
+//        System.out.println(reverseNegativePrice);
+        List<Products> NegativePrice = productRepositoryImple.findProductsNegativePrice();
+        System.out.println(NegativePrice);
     }
 }

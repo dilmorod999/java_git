@@ -19,4 +19,5 @@ public interface ProductRepository {
     int AmountLastName(String name);
     //    Создать метод репозитории который будет возвращаться название продукта перевёрнуто тех продукты цена будет отрицательной
     List<Products> findReverseProductNegative();
+    List<Products> findProductsNegativePrice();
 }
