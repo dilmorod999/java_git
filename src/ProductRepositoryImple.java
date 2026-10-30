@@ -114,5 +114,17 @@ public class ProductRepositoryImple implements ProductRepository {
         return amount;
     }
 
+    @Override
+    public int AmountLastName(String name) {
+        int amount =0;
+        for (int i = 0; i <products.size() ; i++) {
+            String last = products.get(i).getName().substring(products.get(i).getName().length()-1);
+            if (last.equals(name)){
+                amount++;
+            }
+        }
+        return amount;
+    }
+
 
 }
