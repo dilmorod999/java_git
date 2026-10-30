@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Products products = new Products(1, "Iphone", 2000, LocalDate.now());
-        Products products1 = new Products(2, "Samsung", 1400, LocalDate.now());
+        Products products1 = new Products(2, "Samsunga", 1400, LocalDate.now());
         Products products2 = new Products(3, "Redmi", 900, LocalDate.now());
         ArrayList<Products> productsArrayList = new ArrayList<>();
         productsArrayList.add(products);
@@ -21,8 +21,10 @@ public class Main {
 //        Home
 //        Products max = productRepositoryImple.findMaxProduct();
 //        System.out.println(max);
-        List<Products> maxMinProduct = productRepositoryImple.findMaxMinProduct();
-        System.out.println(maxMinProduct);
+//        List<Products> maxMinProduct = productRepositoryImple.findMaxMinProduct();
+//        System.out.println(maxMinProduct);
+        int totalLatsA = productRepositoryImple.findTotalLastA();
+        System.out.println(totalLatsA);
 
     }
 }

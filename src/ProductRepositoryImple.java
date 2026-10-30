@@ -89,5 +89,17 @@ public class ProductRepositoryImple implements ProductRepository {
         return result;
     }
 
+    @Override
+    public int findTotalLastA() {
+        int total = 0;
+        for (int i = 0; i < products.size(); i++) {
+            String last = products.get(i).getName().substring(products.get(i).getName().length() - 1);
+            if (last.equals("a")) {
+                total = total + products.get(i).getPrice();
+            }
+        }
+        return total;
+    }
+
 
 }
