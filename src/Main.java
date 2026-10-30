@@ -18,8 +18,11 @@ public class Main {
 //        System.out.println(minmax);
 //        int amount = productRepositoryImple.amount(900);
 //        System.out.println(amount);
-        Products max = productRepositoryImple.findMaxProduct();
-        System.out.println(max);
+//        Home
+//        Products max = productRepositoryImple.findMaxProduct();
+//        System.out.println(max);
+        List<Products> maxMinProduct = productRepositoryImple.findMaxMinProduct();
+        System.out.println(maxMinProduct);
 
     }
 }

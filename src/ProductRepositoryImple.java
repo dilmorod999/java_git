@@ -57,14 +57,37 @@ public class ProductRepositoryImple implements ProductRepository {
     @Override
     public Products findMaxProduct() {
         Products maxProduct = null;
-        int max=0;
-        for (int i = 0; i <products.size() ; i++) {
-            if (products.get(i).getPrice() > max){
+        int max = 0;
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getPrice() > max) {
                 max = products.get(i).getPrice();
                 maxProduct = products.get(i);
             }
         }
         return maxProduct;
     }
+
+    @Override
+    public List<Products> findMaxMinProduct() {
+        List<Products> result = new ArrayList<>();
+        Products maxProduct = null;
+        Products minProduct = null;
+        int max = 0;
+        int min = products.get(0).getPrice();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getPrice() > max) {
+                max = products.get(i).getPrice();
+                maxProduct = products.get(i);
+            }
+            if (products.get(i).getPrice() < min) {
+                min = products.get(i).getPrice();
+                minProduct = products.get(i);
+                result.add(maxProduct);
+                result.add(minProduct);
+            }
+        }
+        return result;
+    }
+
 
 }
