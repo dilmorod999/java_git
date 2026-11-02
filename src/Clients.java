@@ -41,6 +41,10 @@ public class Clients {
         this.login = login;
     }
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     @Override
     public String toString() {
         return "Clients{" +

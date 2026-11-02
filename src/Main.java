@@ -35,7 +35,7 @@ public class Main {
 //        System.out.println(NegativePrice);g
         Clients clients = new Clients(1, "Sasha", "Sasha67", 4000, true);
         Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, false);
-        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", 2000, true);
+        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, true);
         Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, false);
         ArrayList<Clients> clientsArrayList = new ArrayList<>();
         clientsArrayList.add(clients);
@@ -43,7 +43,9 @@ public class Main {
         clientsArrayList.add(clients2);
         clientsArrayList.add(clients3);
         ClientRepositoryImple clientRepositoryImple = new ClientRepositoryImple(clientsArrayList);
-        List<Clients> reverseFindId = clientRepositoryImple.reverseNameAndloginFindById(1);
+        Clients reverseFindId = clientRepositoryImple.reverseNameAndloginFindById(2);
         System.out.println(reverseFindId);
+//        List<Clients> findBalanceless = clientRepositoryImple.findClientBalanceLess0And2();
+//        System.out.println(findBalanceless);
     }
 }
