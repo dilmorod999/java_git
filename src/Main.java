@@ -43,9 +43,12 @@ public class Main {
         clientsArrayList.add(clients2);
         clientsArrayList.add(clients3);
         ClientRepositoryImple clientRepositoryImple = new ClientRepositoryImple(clientsArrayList);
-        Clients reverseFindId = clientRepositoryImple.reverseNameAndloginFindById(2);
-        System.out.println(reverseFindId);
-//        List<Clients> findBalanceless = clientRepositoryImple.findClientBalanceLess0And2();
-//        System.out.println(findBalanceless);
+//        Clients reverseFindId = clientRepositoryImple.reverseNameAndloginFindById(2);
+//        System.out.println(reverseFindId);
+//        List<Clients> block = clientRepositoryImple.findBalanceBlock(1000);
+//        System.out.println(block);
+        List<Clients> findBalanceless = clientRepositoryImple.findClientBalanceLess0And2();
+        System.out.println(findBalanceless);
+
     }
 }

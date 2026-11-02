@@ -35,17 +35,28 @@ public class ClientRepositoryImple implements ClientRepository {
     }
 
     @Override
+    public List<Clients> findBalanceBlock(int value) {
+        List<Clients> result = new ArrayList<>();
+        for (int i = 0; i <clients.size() ; i++) {
+            if (clients.get(i).getBlock() == true){
+                clients.get(i).setBalance(value);
+                result.add(clients.get(i));
+            }
+        }
+        return result;
+    }
+//Метод который найдет всех клиентов с балансом меньше нуля и которые заканчиваются на 2 и вернет их
+
+    @Override
     public List<Clients> findClientBalanceLess0And2() {
         List<Clients> result = new ArrayList<>();
-        String empty = "";
         for (int i = 0; i < clients.size(); i++) {
             if (clients.get(i).getBalance() < 0) {
                 String balance = clients.get(i).getBalance() + "";
                 String last = balance.substring(balance.length()-1);
-                if (last.charAt(i) == 2){
-                    empty = empty + last.charAt(i);
+                if (last.equals("2")){
+                    result.add(clients.get(i));
                 }
-
             }
         }
         return result;
