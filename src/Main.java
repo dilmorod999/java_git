@@ -33,10 +33,10 @@ public class Main {
 //        System.out.println(reverseNegativePrice);
 //        List<Products> NegativePrice = productRepositoryImple.findProductsNegativePrice();
 //        System.out.println(NegativePrice);g
-        Clients clients = new Clients(1, "Sasha", "Sasha67", 4000, true);
-        Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, false);
-        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, true);
-        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, false);
+        Clients clients = new Clients(1, "Sasha", "Sasha67fgfhgfh", 4000,  "qab",true);
+        Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, "qab",true);
+        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, "wefwef",false);
+        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, "fewfew",false);
         ArrayList<Clients> clientsArrayList = new ArrayList<>();
         clientsArrayList.add(clients);
         clientsArrayList.add(clients1);
@@ -47,8 +47,10 @@ public class Main {
 //        System.out.println(reverseFindId);
 //        List<Clients> block = clientRepositoryImple.findBalanceBlock(1000);
 //        System.out.println(block);
-        List<Clients> findBalanceless = clientRepositoryImple.findClientBalanceLess0And2();
-        System.out.println(findBalanceless);
+//        List<Clients> findBalanceless = clientRepositoryImple.findClientBalanceLess0And2();
+//        System.out.println(findBalanceless);
+        List<Clients> finddeleteABwithPasswordLogin10 = clientRepositoryImple.deleteABpasswordLogin10();
+        System.out.println(finddeleteABwithPasswordLogin10);
 
     }
 }

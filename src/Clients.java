@@ -3,13 +3,15 @@ public class Clients {
     private String name;
     private String login;
     private int balance;
+    private String password;
     private boolean block;
 
-    Clients(Integer id, String name, String login, int balance, boolean block) {
+    Clients(Integer id, String name, String login, int balance, String password, boolean block) {
         this.id = id;
         this.name = name;
         this.login = login;
         this.balance = balance;
+        this.password = password;
         this.block = block;
     }
 
@@ -41,8 +43,16 @@ public class Clients {
         this.login = login;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -52,6 +62,7 @@ public class Clients {
                 ", name='" + name + '\'' +
                 ", login='" + login + '\'' +
                 ", balance=" + balance +
+                ", password='" + password + '\'' +
                 ", block=" + block +
                 '}';
     }
