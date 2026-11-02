@@ -10,5 +10,6 @@ public interface ClientRepository {
 //    метод который перевернет и удалить букву а и б из пароля клиента если логин клиента больше 10
     List<Clients> deleteABpasswordLogin10();
 //    метод который вернет клиента по айди при этом его логин будет содержать через тире его так же пароль
-    Clients findClientLogin
+   List <Clients >findClientLoginPassword(int id);
+
 }

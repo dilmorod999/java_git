@@ -81,5 +81,27 @@ public class ClientRepositoryImple implements ClientRepository {
         return result;
     }
 
+    //метод который вернет клиента по айди при этом его логин будет содержать через тире его так же пароль
+    @Override
+    public List<Clients> findClientLoginPassword(int id) {
+        List<Clients> result = new ArrayList<>();
+        for (int i = 0; i < clients.size(); i++) {
+            String emptyLogin = "";
+            if (clients.get(i).getId() == id) {
+                for (int j = 0; j < clients.get(i).getLogin().length(); j++) {
+                    emptyLogin = emptyLogin + clients.get(i).getLogin().charAt(j) + "-";
+                }
+                String emptyPassword = "";
+                for (int j = 0; j < clients.get(i).getPassword().length(); j++) {
+                    emptyPassword = emptyPassword + clients.get(i).getPassword().charAt(j) + "-";
+                }
+                clients.get(i).setLogin(emptyLogin);
+                clients.get(i).setPassword(emptyPassword);
+                result.add(clients.get(i));
+            }
+        }
+        return result;
+    }
+
 
 }
