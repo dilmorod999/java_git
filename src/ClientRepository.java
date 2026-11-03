@@ -11,5 +11,7 @@ public interface ClientRepository {
     List<Clients> deleteABpasswordLogin10();
 //    метод который вернет клиента по айди при этом его логин будет содержать через тире его так же пароль
    List <Clients >findClientLoginPassword(int id);
+//   метод который вернет самого дорого клиента каждую букву через тире его логина а с баласа убрать все нули
+   Clients FindMaxClientLoginTreBalanceDeleteZero();
 
 }

@@ -103,5 +103,33 @@ public class ClientRepositoryImple implements ClientRepository {
         return result;
     }
 
+    //метод который вернет самого дорого клиента каждую букву через тире его логина а с баласа убрать все нули
+    @Override
+    public Clients FindMaxClientLoginTreBalanceDeleteZero() {
+        Clients found = null;
+        Clients maxClient = null;
+        int max = 0;
+        for (int i = 0; i < clients.size(); i++) {
+            if (clients.get(i).getBalance() > max) {
+                max = clients.get(i).getBalance();
+                maxClient = clients.get(i);
+            }
+        }
+        String emptyL = "";
+        for (int i = 0; i < maxClient.getLogin().length(); i++) {
+            emptyL = emptyL + maxClient.getLogin().charAt(i) + "-";
+        }
+        String emptyDelete = "";
+        String balance = maxClient.getBalance() + "";
+        for (int i = 0; i < maxClient.getBalance(); i++) {
+            if (balance.charAt(i) != '0') {
+                emptyDelete = emptyDelete + balance.charAt(i);
+            }
+            clients.get(i).setLogin(emptyL);
+            clients.get(i).setBalance(emptyDelete.length());
+            found = clients.get(i);
+        }
+        return found;
+    }
 
 }

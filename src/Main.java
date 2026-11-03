@@ -51,8 +51,9 @@ public class Main {
 //        System.out.println(findBalanceless);
 //        List<Clients> finddeleteABwithPasswordLogin10 = clientRepositoryImple.deleteABpasswordLogin10();
 //        System.out.println(finddeleteABwithPasswordLogin10);
-        List<Clients> findIdLoginPassword = clientRepositoryImple.findClientLoginPassword(1);
-        System.out.println(findIdLoginPassword);
-
+//        List<Clients> findIdLoginPassword = clientRepositoryImple.findClientLoginPassword(1);
+//        System.out.println(findIdLoginPassword);
+        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
+        System.out.println(foundMaxClientLoginDelete0);
     }
 }
