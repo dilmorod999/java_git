@@ -33,10 +33,10 @@ public class Main {
 //        System.out.println(reverseNegativePrice);
 //        List<Products> NegativePrice = productRepositoryImple.findProductsNegativePrice();
 //        System.out.println(NegativePrice);g
-        Clients clients = new Clients(1, "Sasha", "Sasha67fgfhgfh", 4000,  "qab",true);
-        Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, "qab",true);
-        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, "wefwef",false);
-        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, "fewfew",false);
+        Clients clients = new Clients(1, "Sasha", "Sasha67fgfhgfh", 4000, "qab", true);
+        Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, "qab", true);
+        Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, "wefwef", false);
+        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, "fewfew", false);
         ArrayList<Clients> clientsArrayList = new ArrayList<>();
         clientsArrayList.add(clients);
         clientsArrayList.add(clients1);
@@ -53,7 +53,19 @@ public class Main {
 //        System.out.println(finddeleteABwithPasswordLogin10);
 //        List<Clients> findIdLoginPassword = clientRepositoryImple.findClientLoginPassword(1);
 //        System.out.println(findIdLoginPassword);
-        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
-        System.out.println(foundMaxClientLoginDelete0);
+//        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
+//        System.out.println(foundMaxClientLoginDelete0);
+        Cars cars = new Cars(1, "Bmw", 40000, "A432LL");
+        Cars cars1 = new Cars(2, "Porsche", 33333, "I988PP");
+        Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY");
+        Cars cars3 = new Cars(4, "Damas", 9999, "Y666BA");
+        ArrayList<Cars> carsArrayList = new ArrayList<>();
+        carsArrayList.add(cars);
+        carsArrayList.add(cars1);
+        carsArrayList.add(cars2);
+        carsArrayList.add(cars3);
+        CarRepositoryImple carRepositoryImple = new CarRepositoryImple(carsArrayList);
+        List<Cars> FindMaxAndReverseNumber1000 = carRepositoryImple.findMaxPriceReverseNumber();
+        System.out.println(FindMaxAndReverseNumber1000);
     }
 }
