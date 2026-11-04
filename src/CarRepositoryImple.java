@@ -54,4 +54,25 @@ public class CarRepositoryImple implements CarRepository {
 
 
     }
+
+    //Создать метод который будет находить количество машин Bal будет содержать три нуля а длина номера машины будет больше 10
+    @Override
+    public int AmountBalance() {
+        int amount = 0;
+        int amountBalance = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            String balance = cars.get(i).getPrice() + "";
+            for (int j = 0; j < balance.length(); j++) {
+                if (balance.charAt(j) == '0') {
+                    amountBalance++;
+                }
+            }
+            if (amountBalance == 3) {
+                if (cars.get(i).getNumber().length() > 10) {
+                    amount++;
+                }
+            }
+        }
+        return amount;
+    }
 }
