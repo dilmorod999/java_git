@@ -69,7 +69,9 @@ public class Main {
 //        System.out.println(FindMaxAndReverseNumber1000);
 //        int findTotalNumber = carRepositoryImple.findTotalPriceNumberAA();
 //        System.out.println(findTotalNumber);
-        int findAmountCarBalance = carRepositoryImple.AmountBalance();
-        System.out.println(findAmountCarBalance);
+//        int findAmountCarBalance = carRepositoryImple.AmountBalance();
+//        System.out.println(findAmountCarBalance);
+        Cars find = carRepositoryImple.findMinPriceMax();
+        System.out.println(find);
     }
 }

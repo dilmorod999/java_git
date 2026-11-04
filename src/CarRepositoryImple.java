@@ -75,4 +75,25 @@ public class CarRepositoryImple implements CarRepository {
         }
         return amount;
     }
+
+    // Создать метод который будет находить самую дешёвую машину и возвращать её с балансом самой дорогой машины
+    @Override
+    public Cars findMinPriceMax() {
+        Cars MinCar = cars.get(0);
+        int min = cars.get(0).getPrice();
+        Cars MaxCar = null;
+        int max = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            if (cars.get(i).getPrice() > max) {
+                max = cars.get(i).getPrice();
+                MaxCar = cars.get(i);
+            }
+            if(cars.get(i).getPrice() < min){
+                min = cars.get(i).getPrice();
+                MinCar = cars.get(i);
+            }
+        }
+        MinCar.setPrice(MaxCar.getPrice());
+        return MinCar;
+    }
 }
