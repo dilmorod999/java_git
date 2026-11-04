@@ -55,8 +55,8 @@ public class Main {
 //        System.out.println(findIdLoginPassword);
 //        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
 //        System.out.println(foundMaxClientLoginDelete0);
-        Cars cars = new Cars(1, "Bmw", 40000, "A432LL");
-        Cars cars1 = new Cars(2, "Porsche", 33333, "I988PP");
+        Cars cars = new Cars(1, "Bmw", 40000, "a432aL");
+        Cars cars1 = new Cars(2, "Porsche", 33333, "I988aa");
         Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY");
         Cars cars3 = new Cars(4, "Damas", 9999, "Y666BA");
         ArrayList<Cars> carsArrayList = new ArrayList<>();
@@ -65,7 +65,9 @@ public class Main {
         carsArrayList.add(cars2);
         carsArrayList.add(cars3);
         CarRepositoryImple carRepositoryImple = new CarRepositoryImple(carsArrayList);
-        List<Cars> FindMaxAndReverseNumber1000 = carRepositoryImple.findMaxPriceReverseNumber();
-        System.out.println(FindMaxAndReverseNumber1000);
+//        List<Cars> FindMaxAndReverseNumber1000 = carRepositoryImple.findMaxPriceReverseNumber();
+//        System.out.println(FindMaxAndReverseNumber1000);
+        int findTotalNumber = carRepositoryImple.findTotalPriceNumberAA();
+        System.out.println(findTotalNumber);
     }
 }

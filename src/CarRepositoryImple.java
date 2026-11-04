@@ -34,4 +34,24 @@ public class CarRepositoryImple implements CarRepository {
         result.add(maxCars);
         return result;
     }
+
+    //Создать метод который будет находить общую сумму всех автомобилей чей номер будет содержать две буквы а
+    @Override
+    public int findTotalPriceNumberAA() {
+        int total = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            int amount = 0;
+            for (int j = 0; j < cars.get(i).getNumber().length(); j++) {
+                if (cars.get(i).getNumber().charAt(j) == 'a') {
+                    amount++;
+                }
+            }
+            if (amount == 2) {
+                total = total + cars.get(i).getPrice();
+            }
+        }
+        return total;
+
+
+    }
 }
