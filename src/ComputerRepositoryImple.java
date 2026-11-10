@@ -40,4 +40,20 @@ public class ComputerRepositoryImple implements ComputerRepository {
         }
         return result;
     }
+
+    //Метод который будет находить общую сумму всех компьютеров с чётной ценой который заканчивается на ноль
+    @Override
+    public int findTotolPriceLastZero() {
+        int total = 0;
+        for (int i = 0; i < computers.size(); i++) {
+            if (computers.get(i).getPrice() % 2 == 0) {
+                String price = computers.get(i).getPrice() + "";
+                String last = price.substring(price.length() - 1);
+                if (last.equals("0")) {
+                    total = total + last.length();
+                }
+            }
+        }
+        return total;
+    }
 }

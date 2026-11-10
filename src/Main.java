@@ -103,7 +103,9 @@ public class Main {
         computerArrayList.add(computer2);
         computerArrayList.add(computer3);
         ComputerRepositoryImple computerRepositoryImple = new ComputerRepositoryImple(computerArrayList);
-        List<Computer> FindComputerFL = computerRepositoryImple.findFirstLastPart();
-        System.out.println(FindComputerFL);
+//        List<Computer> FindComputerFL = computerRepositoryImple.findFirstLastPart();
+//        System.out.println(FindComputerFL);
+        int findTotalLastZeroComputer = computerRepositoryImple.findTotolPriceLastZero();
+        System.out.println(findTotalLastZeroComputer);
     }
 }
