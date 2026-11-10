@@ -30,6 +30,10 @@ public class Computer {
         this.name = name;
     }
 
+    public void setBu(boolean bu) {
+        this.bu = bu;
+    }
+
     @Override
     public String toString() {
         return "Computer{" +

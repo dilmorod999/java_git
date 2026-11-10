@@ -105,7 +105,9 @@ public class Main {
         ComputerRepositoryImple computerRepositoryImple = new ComputerRepositoryImple(computerArrayList);
 //        List<Computer> FindComputerFL = computerRepositoryImple.findFirstLastPart();
 //        System.out.println(FindComputerFL);
-        int findTotalLastZeroComputer = computerRepositoryImple.findTotolPriceLastZero();
-        System.out.println(findTotalLastZeroComputer);
+//        int findTotalLastZeroComputer = computerRepositoryImple.findTotolPriceLastZero();
+//        System.out.println(findTotalLastZeroComputer);
+//        List<Computer> FindComputerBuNewPriceMore = computerRepositoryImple.findBuNewMore1000();
+//        System.out.println(FindComputerBuNewPriceMore);
     }
 }

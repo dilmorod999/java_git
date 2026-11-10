@@ -56,4 +56,20 @@ public class ComputerRepositoryImple implements ComputerRepository {
         }
         return total;
     }
+//    Метод который будет находить все компьютеры БУ и делать их новыми если цена будет больше 1000
+
+    @Override
+    public List<Computer> findBuNewMore1000() {
+        List<Computer> result = new ArrayList<>();
+        for (int i = 0; i < computers.size(); i++) {
+            if (computers.get(i).getPrice() > 1000) {
+                if (computers.get(i).getBu() == true) {
+                    computers.get(i).setBu(false);
+                    result.add(computers.get(i));
+                }
+            }
+        }
+        return result;
+    }
+
 }
