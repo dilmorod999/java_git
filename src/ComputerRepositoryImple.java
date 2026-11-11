@@ -15,30 +15,28 @@ public class ComputerRepositoryImple implements ComputerRepository {
     //Метод который будет находить все компьютеры в которых есть четное количество букв а в первый и во второй половине его названия
     @Override
     public List<Computer> findFirstLastPart() {
-        List<Computer> result = new ArrayList<>();
-        for (int i = 0; i < computers.size(); i++) {
-            String emptyF = "";
-            String emptyL = "";
-            if (computers.get(i).getName().length() % 2 == 0) {
-                String firsPart = computers.get(i).getName().substring(0, computers.get(i).getName().length() / 2);
-                String lastPart = computers.get(i).getName().substring(computers.get(i).getName().length() / 2);
-                for (int j = 0; j < firsPart.length(); j++) {
-                    if (firsPart.charAt(j) == 'a') {
-                        emptyF = emptyF + firsPart.charAt(j);
-                    }
+        List<Computer> comps = new ArrayList<>();
+        for (Computer computer : computers) {
+            String name = computer.getName();
+            String fp = name.substring(0, name.length() / 2);
+            String lp = name.substring(name.length() / 2);
+            int a = 0;
+            int b = 0;
+            for (int i = 0; i < fp.length(); i++) {
+                if (fp.charAt(i) == 'a') {
+                    a++;
                 }
-                for (int j = 0; j < lastPart.length(); j++) {
-                    if (lastPart.charAt(j) == 'a') {
-                        emptyL = emptyL + lastPart.charAt(j);
-                    }
-                }
-                computers.get(i).setName(emptyF);
-                computers.get(i).setName(emptyL);
-                result.add(computers.get(i));
             }
-
+            for (int i = 0; i < lp.length(); i++) {
+                if (lp.charAt(i) == 'b') {
+                    b++;
+                }
+            }
+            if (a % 2 == 0 && b % 2 == 0 && a > 0 && b > 0) {
+                comps.add(computer);
+            }
         }
-        return result;
+        return comps;
     }
 
     //Метод который будет находить общую сумму всех компьютеров с чётной ценой который заканчивается на ноль
@@ -77,9 +75,15 @@ public class ComputerRepositoryImple implements ComputerRepository {
     public List<Computer> findInComputerFirstP() {
         List<Computer> result = new ArrayList<>();
         for (int i = 0; i < computers.size(); i++) {
+            int countF = 0;
             String price = computers.get(i).getPrice() + "";
             String firstPart = price.substring(0, price.length() / 2);
-            if (firstPart.equals("111")) {
+            for (int j = 0; j <firstPart.length() ; j++) {
+                if (firstPart.charAt(j) == '1'){
+                    countF++;
+                }
+            }
+            if (countF == 3){
                 result.add(computers.get(i));
             }
         }
@@ -109,9 +113,10 @@ public class ComputerRepositoryImple implements ComputerRepository {
                     empty = empty + computers.get(i).getName().charAt(i);
                 }
                 computers.get(i).setName(empty);
-                result.add(empty);
+                result.add(computers.get(i));
             }
         }
+        return result;
     }
 
 }

@@ -94,9 +94,9 @@ public class Main {
 //        Phone findMaxBuPhoneTotal = phoneRepositoryImple.findBUPhoneTotalMax();
 //        System.out.println(findMaxBuPhoneTotal);
         Computer computer = new Computer(1, "Msi", 2000, true);
-        Computer computer1 = new Computer(2, "Samsunagg", 4333, false);
-        Computer computer2 = new Computer(3, "Hp", 11199999, false);
-        Computer computer3 = new Computer(4, "Apple", 1000, true);
+        Computer computer1 = new Computer(2, "Samsbunagg", 4333, false);
+        Computer computer2 = new Computer(3, "aaHpbb", 11199999, false);
+        Computer computer3 = new Computer(4, "Appble", 1000, true);
         ArrayList<Computer> computerArrayList = new ArrayList<>();
         computerArrayList.add(computer);
         computerArrayList.add(computer1);
@@ -111,8 +111,10 @@ public class Main {
 //        System.out.println(FindComputerBuNewPriceMore);
 //        List<Computer> findComputerFirstPartThreeZero = computerRepositoryImple.findInComputerFirstP();
 //        System.out.println(findComputerFirstPartThreeZero);
-        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000);
-        System.out.println(findDipoziPriceMore);
+//        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000);
+//        System.out.println(findDipoziPriceMore);
+//        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000);
+//        System.out.println(findDipozonePriceDeleteAB);
 
     }
 }
