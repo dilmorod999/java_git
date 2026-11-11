@@ -7,4 +7,10 @@ public interface ComputerRepository {
     int findTotolPriceLastZero();
 //    Метод который будет находить все компьютеры БУ и делать их новыми если цена будет больше 1000
     List<Computer> findBuNewMore1000();
+//    Метод который будет находить все компьютеры в цене которых в первой половине цены есть три единицы
+    List<Computer> findInComputerFirstP();
+//    Метод который будет находить все компьютеры в определённом диапазоне увеличить их цену назначение переданной через аргумент
+    List<Computer> findDizonePrice(int price);
+//Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
+    List<Computer> findDipozonePriceDeleteAB(int price);
 }

@@ -72,4 +72,46 @@ public class ComputerRepositoryImple implements ComputerRepository {
         return result;
     }
 
+    //Метод который будет находить все компьютеры в цене которых в первой половине цены есть три единицы
+    @Override
+    public List<Computer> findInComputerFirstP() {
+        List<Computer> result = new ArrayList<>();
+        for (int i = 0; i < computers.size(); i++) {
+            String price = computers.get(i).getPrice() + "";
+            String firstPart = price.substring(0, price.length() / 2);
+            if (firstPart.equals("111")) {
+                result.add(computers.get(i));
+            }
+        }
+        return result;
+    }
+
+    //Метод который будет находить все компьютеры в определённом диапазоне увеличить их цену назначение переданной через аргумент
+    @Override
+    public List<Computer> findDizonePrice(int price) {
+        List<Computer> result = new ArrayList<>();
+        for (int i = 0; i < computers.size(); i++) {
+            if (computers.get(i).getPrice() == price) {
+                computers.get(i).setPrice(computers.get(i).getPrice() + price);
+                result.add(computers.get(i));
+            }
+        }
+        return result;
+    }
+//Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
+    @Override
+    public List<Computer> findDipozonePriceDeleteAB(int price) {
+        List<Computer> result = new ArrayList<>();
+        for (int i = 0; i <computers.size() ; i++) {
+            if (computers.get(i).getPrice() == price){
+                String empty="";
+                if (computers.get(i).getName().charAt(i) != 'a' && computers.get(i).getName().charAt(i) != 'b'){
+                    empty = empty + computers.get(i).getName().charAt(i);
+                }
+                computers.get(i).setName(empty);
+                result.add(empty);
+            }
+        }
+    }
+
 }
