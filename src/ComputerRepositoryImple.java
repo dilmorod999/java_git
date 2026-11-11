@@ -78,12 +78,12 @@ public class ComputerRepositoryImple implements ComputerRepository {
             int countF = 0;
             String price = computers.get(i).getPrice() + "";
             String firstPart = price.substring(0, price.length() / 2);
-            for (int j = 0; j <firstPart.length() ; j++) {
-                if (firstPart.charAt(j) == '1'){
+            for (int j = 0; j < firstPart.length(); j++) {
+                if (firstPart.charAt(j) == '1') {
                     countF++;
                 }
             }
-            if (countF == 3){
+            if (countF == 3) {
                 result.add(computers.get(i));
             }
         }
@@ -92,24 +92,25 @@ public class ComputerRepositoryImple implements ComputerRepository {
 
     //Метод который будет находить все компьютеры в определённом диапазоне увеличить их цену назначение переданной через аргумент
     @Override
-    public List<Computer> findDizonePrice(int price) {
+    public List<Computer> findDizonePrice(int min, int max, int price) {
         List<Computer> result = new ArrayList<>();
         for (int i = 0; i < computers.size(); i++) {
-            if (computers.get(i).getPrice() == price) {
+            if (computers.get(i).getPrice() > min && computers.get(i).getPrice() < max) {
                 computers.get(i).setPrice(computers.get(i).getPrice() + price);
                 result.add(computers.get(i));
             }
         }
         return result;
     }
-//Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
+
+    //Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
     @Override
     public List<Computer> findDipozonePriceDeleteAB(int price) {
         List<Computer> result = new ArrayList<>();
-        for (int i = 0; i <computers.size() ; i++) {
-            if (computers.get(i).getPrice() == price){
-                String empty="";
-                if (computers.get(i).getName().charAt(i) != 'a' && computers.get(i).getName().charAt(i) != 'b'){
+        for (int i = 0; i < computers.size(); i++) {
+            if (computers.get(i).getPrice() == price) {
+                String empty = "";
+                if (computers.get(i).getName().charAt(i) != 'a' && computers.get(i).getName().charAt(i) != 'b') {
                     empty = empty + computers.get(i).getName().charAt(i);
                 }
                 computers.get(i).setName(empty);

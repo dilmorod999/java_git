@@ -10,7 +10,7 @@ public interface ComputerRepository {
 //    Метод который будет находить все компьютеры в цене которых в первой половине цены есть три единицы
     List<Computer> findInComputerFirstP();
 //    Метод который будет находить все компьютеры в определённом диапазоне увеличить их цену назначение переданной через аргумент
-    List<Computer> findDizonePrice(int price);
+    List<Computer> findDizonePrice(int min, int max ,int price);
 //Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
     List<Computer> findDipozonePriceDeleteAB(int price);
 }
