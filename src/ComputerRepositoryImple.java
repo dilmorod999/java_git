@@ -105,13 +105,16 @@ public class ComputerRepositoryImple implements ComputerRepository {
 
     //Метод который будет находить все компьютеры в определённом диапазоне цен и убирать из названия все буквы а и б
     @Override
-    public List<Computer> findDipozonePriceDeleteAB(int price) {
+    public List<Computer> findDipozonePriceDeleteAB(int min, int max) {
         List<Computer> result = new ArrayList<>();
         for (int i = 0; i < computers.size(); i++) {
-            if (computers.get(i).getPrice() == price) {
-                String empty = "";
-                if (computers.get(i).getName().charAt(i) != 'a' && computers.get(i).getName().charAt(i) != 'b') {
-                    empty = empty + computers.get(i).getName().charAt(i);
+            String empty = "";
+            if (computers.get(i).getPrice() > min && computers.get(i).getPrice() < max) {
+                String name = computers.get(i).getName();
+                for (int j = 0; j < name.length(); j++) {
+                    if (name.charAt(j) != 'a' && name.charAt(j) != 'b') {
+                        empty = empty + name.charAt(j);
+                    }
                 }
                 computers.get(i).setName(empty);
                 result.add(computers.get(i));

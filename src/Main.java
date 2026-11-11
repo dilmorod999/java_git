@@ -111,10 +111,10 @@ public class Main {
 //        System.out.println(FindComputerBuNewPriceMore);
 //        List<Computer> findComputerFirstPartThreeZero = computerRepositoryImple.findInComputerFirstP();
 //        System.out.println(findComputerFirstPartThreeZero);
-        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000,100000,2);
-        System.out.println(findDipoziPriceMore);
-//        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000);
-//        System.out.println(findDipozonePriceDeleteAB);
+//        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000,100000,2);
+//        System.out.println(findDipoziPriceMore);
+        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
+        System.out.println(findDipozonePriceDeleteAB);
 
     }
 }
