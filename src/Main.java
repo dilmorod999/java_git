@@ -55,6 +55,8 @@ public class Main {
 //        System.out.println(findIdLoginPassword);
 //        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
 //        System.out.println(foundMaxClientLoginDelete0);
+        List<Clients> findBalanceNegative = clientRepositoryImple.findNegativeBalance();
+        System.out.println(findBalanceNegative);
         Cars cars = new Cars(1, "Bmw", 4000, "a432aLaaaaaaaa");
         Cars cars1 = new Cars(2, "Porsche", 33333, "I988aa");
         Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY");
@@ -113,8 +115,8 @@ public class Main {
 //        System.out.println(findComputerFirstPartThreeZero);
 //        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000,100000,2);
 //        System.out.println(findDipoziPriceMore);
-        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
-        System.out.println(findDipozonePriceDeleteAB);
+//        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
+//        System.out.println(findDipozonePriceDeleteAB);
 
     }
 }

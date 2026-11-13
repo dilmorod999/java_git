@@ -132,4 +132,15 @@ public class ClientRepositoryImple implements ClientRepository {
         return found;
     }
 
+    @Override
+    public List<Clients> findNegativeBalance() {
+        List<Clients> result = new ArrayList<>();
+        for (int i = 0; i <clients.size() ; i++) {
+            if (clients.get(i).getBalance() < 0){
+                result.add(clients.get(i));
+            }
+        }
+        return result;
+    }
+
 }
