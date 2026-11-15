@@ -55,8 +55,8 @@ public class Main {
 //        System.out.println(findIdLoginPassword);
 //        Clients foundMaxClientLoginDelete0 = clientRepositoryImple.FindMaxClientLoginTreBalanceDeleteZero();
 //        System.out.println(foundMaxClientLoginDelete0);
-        List<Clients> findBalanceNegative = clientRepositoryImple.findNegativeBalance();
-        System.out.println(findBalanceNegative);
+//        List<Clients> findBalanceNegative = clientRepositoryImple.findNegativeBalance();
+//        System.out.println(findBalanceNegative);
         Cars cars = new Cars(1, "Bmw", 4000, "a432aLaaaaaaaa");
         Cars cars1 = new Cars(2, "Porsche", 33333, "I988aa");
         Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY");
@@ -116,7 +116,18 @@ public class Main {
 //        List<Computer> findDipoziPriceMore = computerRepositoryImple.findDizonePrice(1000,100000,2);
 //        System.out.println(findDipoziPriceMore);
 //        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
-//        System.out.println(findDipozonePriceDeleteAB);
-
+//        System.out.println(findDipozonePriceDeleteAB);'
+        Employee employee = new Employee(1,1200,"Ivan","Manager","Iphone2222");
+        Employee employee1 = new Employee(2,3000,"AleksandrA","Admin","TV223");
+        Employee employee2 = new Employee(3,122112,"Mixail","Manager","Bmw3");
+        Employee employee3 = new Employee(4,900,"Maksim","intern","Samsung322");
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(employee);
+        employeeList.add(employee1);
+        employeeList.add(employee2);
+        employeeList.add(employee3);
+        EmployeeRepositoryImple employeeRepositoryImple = new EmployeeRepositoryImple(employeeList);
+        List<Employee> findEmployeeFirstLast = employeeRepositoryImple.findEmployeeStartAnwWith("A");
+        System.out.println(findEmployeeFirstLast);
     }
 }
