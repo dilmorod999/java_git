@@ -47,7 +47,6 @@ public class PhoneRepositoryImple implements PhoneRepository {
     //    цену задом наперёд при условии что в цене из два нуля
     @Override
     public Phone FindMaxPhoneReverse() {
-
         Phone maxPrice = null;
         int max = 0;
         for (int i = 0; i < phones.size(); i++) {

@@ -33,6 +33,18 @@ public class Employee {
         return insuranceNumber;
     }
 
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

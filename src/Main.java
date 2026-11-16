@@ -117,17 +117,26 @@ public class Main {
 //        System.out.println(findDipoziPriceMore);
 //        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
 //        System.out.println(findDipozonePriceDeleteAB);'
-        Employee employee = new Employee(1,1200,"Ivan","Manager","Iphone2222");
-        Employee employee1 = new Employee(2,3000,"AleksandrA","Admin","TV223");
-        Employee employee2 = new Employee(3,122112,"Mixail","Manager","Bmw3");
-        Employee employee3 = new Employee(4,900,"Maksim","intern","Samsung322");
+        Employee employee = new Employee(1, 1200, "Ivan", "Manager", "Iphone2222");
+        Employee employee1 = new Employee(2, 3000, "AleksandrA", "Admin", "TV223");
+        Employee employee2 = new Employee(3, 122112, "Mixaail", "Manager", "Bmw3");
+        Employee employee3 = new Employee(4, 900, "aMaksimb", "intern", "Samsung322");
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(employee);
         employeeList.add(employee1);
         employeeList.add(employee2);
         employeeList.add(employee3);
         EmployeeRepositoryImple employeeRepositoryImple = new EmployeeRepositoryImple(employeeList);
-        List<Employee> findEmployeeFirstLast = employeeRepositoryImple.findEmployeeStartAnwWith("A");
-        System.out.println(findEmployeeFirstLast);
+//        List<Employee> findEmployeeFirstLast = employeeRepositoryImple.findEmployeeStartAnwWith("a","b");
+//        System.out.println(findEmployeeFirstLast);
+//        Employee findMaxSalaryButNameA = employeeRepositoryImple.findEmployeeMaxPriceAndNameFirstA();
+//        System.out.println(findMaxSalaryButNameA);
+//        int findEmployeeStartNameAA = employeeRepositoryImple.findEmployeeStartAA("Mi");
+//        System.out.println(findEmployeeStartNameAA);
+//        List<Employee> findEmployeePricePosition = employeeRepositoryImple.findEmployeePositionifPrice("Manager");
+//        System.out.println(findEmployeePricePosition);
+//        List<Employee> findEmployeepriceNegative = employeeRepositoryImple.findEmployeePositionPriceMinus("Manager");
+//        System.out.println(findEmployeepriceNegative);
+
     }
 }
