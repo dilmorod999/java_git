@@ -15,4 +15,17 @@ public interface EmployeeRepository {
 
     //    Создать метод который будет находить всех сотрудников по их должности если зарплата будет меньше 5000 сделать их зарплату отрицательной
     List<Employee> findEmployeePositionPriceMinus(String position);
+
+    //Создать метод который будет находить все сотрудников и ставить все буквы а в начало его имени а буквы б в конец
+    List<Employee> findEmployeeAfirstBlast();
+    //    Создать метод который найдет сотрудника по айди и сделает его зарплату отрицательной и уберет все цифры 1 и 4
+    Employee findEmployeeIdSalaryNegativeDelete14(int id);
+//    Создать метод который увеличит зарплату каждого сотрудника если он или менеджер или строитель
+    List<Employee> findInsSalaryEmployeeIfManagerOReng();
+//    Создать метод который вернет все зарплаты сотрудников без нулей
+    List<Employee> findReturnSalaryWithOut0();
+//    Создать метод который вернет все имена сотрудников чья зарплата будет больше 1000 и должность менеджер
+    List<Employee> findSalaryMost1000AndPositionManager();
+
+
 }

@@ -36,7 +36,7 @@ public class Main {
         Clients clients = new Clients(1, "Sasha", "Sasha67fgfhgfh", 4000, "qab", true);
         Clients clients1 = new Clients(2, "Mixail", "Mixa", 3000, "qab", true);
         Clients clients2 = new Clients(3, "Dimitriy", "Dimas", -12, "wefwef", false);
-        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9999, "fewfew", false);
+        Clients clients3 = new Clients(4, "Pavel", "Koshka", 9998, "fewfew", false);
         ArrayList<Clients> clientsArrayList = new ArrayList<>();
         clientsArrayList.add(clients);
         clientsArrayList.add(clients1);
@@ -57,10 +57,10 @@ public class Main {
 //        System.out.println(foundMaxClientLoginDelete0);
 //        List<Clients> findBalanceNegative = clientRepositoryImple.findNegativeBalance();
 //        System.out.println(findBalanceNegative);
-        Cars cars = new Cars(1, "Bmw", 4000, "a432aLaaaaaaaa");
-        Cars cars1 = new Cars(2, "Porsche", 33333, "I988aa");
-        Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY");
-        Cars cars3 = new Cars(4, "Damas", 9999, "Y666BA");
+        Cars cars = new Cars(1, "Bmw", 4000, "a432aLaaaaaaaa", true);
+        Cars cars1 = new Cars(2, "Porsche", 33333, "I988aa", false);
+        Cars cars2 = new Cars(3, "Matiz", 7777, "Y777YY", false);
+        Cars cars3 = new Cars(4, "Dambas", 9998, "Y666BA", true);
         ArrayList<Cars> carsArrayList = new ArrayList<>();
         carsArrayList.add(cars);
         carsArrayList.add(cars1);
@@ -75,6 +75,15 @@ public class Main {
 //        System.out.println(findAmountCarBalance);
 //        Cars find = carRepositoryImple.findMinPriceMax();
 //        System.out.println(find);
+
+//        Cars findMinMaxCenterName = carRepositoryImple.findCenterCarNameMinPrice();
+//        System.out.println(findMinMaxCenterName);
+//        List<Cars> findREverseCArAB = carRepositoryImple.findCarReverseAB();
+//        System.out.println(findREverseCArAB);
+//        List<Cars> findreversePriceBu = carRepositoryImple.findCarReversePriceBU();
+//        System.out.println(findreversePriceBu);
+//        Cars findIdChangeMinn = carRepositoryImple.findIdChangeMin(3);
+//        System.out.println(findIdChangeMinn);
         Phone phone = new Phone(1, "Iphone", 200, "18pro", true);
         Phone phone1 = new Phone(2, "Samsunabg", 100, "A51fababaab", false);
         Phone phone2 = new Phone(3, "Redmi", 300, "Note9", true);
@@ -117,8 +126,8 @@ public class Main {
 //        System.out.println(findDipoziPriceMore);
 //        List<Computer> findDipozonePriceDeleteAB = computerRepositoryImple.findDipozonePriceDeleteAB(1000,1111111);
 //        System.out.println(findDipozonePriceDeleteAB);'
-        Employee employee = new Employee(1, 1200, "Ivan", "Manager", "Iphone2222");
-        Employee employee1 = new Employee(2, 3000, "AleksandrA", "Admin", "TV223");
+        Employee employee = new Employee(1, -14200, "Ivan", "Manager", "Iphone2222");
+        Employee employee1 = new Employee(2, 3000, "papabebe", "Admin", "TV223");
         Employee employee2 = new Employee(3, 122112, "Mixaail", "Manager", "Bmw3");
         Employee employee3 = new Employee(4, 900, "aMaksimb", "intern", "Samsung322");
         List<Employee> employeeList = new ArrayList<>();
@@ -137,6 +146,16 @@ public class Main {
 //        System.out.println(findEmployeePricePosition);
 //        List<Employee> findEmployeepriceNegative = employeeRepositoryImple.findEmployeePositionPriceMinus("Manager");
 //        System.out.println(findEmployeepriceNegative);
-
+        //
+//        List<Employee> findFirstLastAB = employeeRepositoryImple.findEmployeeAfirstBlast();
+//        System.out.println(findFirstLastAB);
+//        Employee findIdDeleteSalaryNegative = employeeRepositoryImple.findEmployeeIdSalaryNegativeDelete14(1);
+//        System.out.println(findIdDeleteSalaryNegative);
+//        List<Employee> findSalaryMost1000PositionManager = employeeRepositoryImple.findSalaryMost1000AndPositionManager();
+//        System.out.println(findSalaryMost1000PositionManager);
+//        List<Employee> findSalaryManagerBuilder = employeeRepositoryImple.findInsSalaryEmployeeIfManagerOReng();
+//        System.out.println(findSalaryManagerBuilder);
+//        List<Employee> findSalaryDelete0 = employeeRepositoryImple.findReturnSalaryWithOut0();
+//        System.out.println(findSalaryDelete0);
     }
 }

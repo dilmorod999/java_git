@@ -13,7 +13,5 @@ public interface ClientRepository {
    List <Clients >findClientLoginPassword(int id);
 //   метод который вернет самого дорого клиента каждую букву через тире его логина а с баласа убрать все нули
    Clients FindMaxClientLoginTreBalanceDeleteZero();
-
     List<Clients> findNegativeBalance();
-
 }

@@ -98,4 +98,95 @@ public class EmployeeRepositoryImple implements EmployeeRepository {
         }
         return list;
     }
+//Создать метод который будет находить все сотрудников и ставить все буквы а в начало его имени а буквы б в конец
+
+    @Override
+    public List<Employee> findEmployeeAfirstBlast() {
+        List<Employee> resultList = new ArrayList<>();
+        // papabebe -> aappeebb
+        for (int i = 0; i < employees.size(); i++) {
+            String resultName = "";
+            String aaa = "";
+            String bbb = "";
+            String name = employees.get(i).getName();
+            for (int j = 0; j < name.length(); j++) {
+                if (name.charAt(j) != 'a' && name.charAt(j) != 'b') {
+                    resultName = resultName + name.charAt(j);
+                } else if (name.charAt(j) == 'a') {
+                    aaa = aaa + 'a';
+                } else {
+                    bbb = bbb + 'b';
+                }
+            }
+            employees.get(i).setName(aaa + resultName + bbb);
+            resultList.add(employees.get(i));
+        }
+        return resultList;
+    }
+
+    //    Создать метод который найдет сотрудника по айди и сделает его зарплату отрицательной и уберет все цифры 1 и 4
+    @Override
+    public Employee findEmployeeIdSalaryNegativeDelete14(int id) {
+        Employee found = null;
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getId().equals(id)) {
+                employees.get(i).setSalary(-employees.get(i).getSalary());
+                String empty = "";
+                String salary = employees.get(i).getSalary() + "";
+                for (int j = 0; j < salary.length(); j++) {
+                    if (salary.charAt(j) != '1' && salary.charAt(j) != '4') {
+                        empty = empty + salary.charAt(j);
+                    }
+                }
+                employees.get(i).setSalary(Integer.parseInt(empty));
+                found = employees.get(i);
+            }
+        }
+        return found;
+    }
+
+    //    Создать метод который увеличит зарплату каждого сотрудника если он или менеджер или строитель
+    @Override
+    public List<Employee> findInsSalaryEmployeeIfManagerOReng() {
+        List<Employee> employeeList = new ArrayList<>();
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getPosition().equals("Manager") || employees.get(i).getPosition().equals("Builder")) {
+                employees.get(i).setSalary(employees.get(i).getSalary() * 10);
+                employeeList.add(employees.get(i));
+            }
+        }
+        return employeeList;
+    }
+
+    //    Создать метод который вернет все зарплаты сотрудников без нулей
+    @Override
+    public List<Employee> findReturnSalaryWithOut0() {
+        List<Employee> result = new ArrayList<>();
+        String empty = "";
+        for (int i = 0; i < employees.size(); i++) {
+            String salary = employees.get(i).getSalary() + "";
+            for (int j = 0; j < salary.length(); j++) {
+                if (salary.charAt(j) != '0') {
+                    empty = empty + salary.charAt(j);
+                }
+                employees.get(i).setSalary(Integer.parseInt(empty));
+                result.add(employees.get(i));
+            }
+        }
+
+        return result;
+    }
+
+    //    Создать метод который вернет все имена сотрудников чья зарплата будет больше 1000 и должность менеджер
+    @Override
+    public List<Employee> findSalaryMost1000AndPositionManager() {
+        List<Employee> result = new ArrayList<>();
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getSalary() > 1000) {
+                employees.get(i).setPosition("Manager");
+                result.add(employees.get(i));
+            }
+        }
+        return result;
+    }
 }
